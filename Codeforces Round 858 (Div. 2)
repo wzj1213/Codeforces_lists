@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define int long long
+const int N = 2e5 + 10, M = 1 << 8;
+
+void solve()
+{
+    int a, b, c, d;
+    cin >> a >> b >> c >> d;
+    int dif = abs(b - d);//差值
+    if(b > d) cout << -1 << endl;
+    else
+    {
+        int x = a + dif;
+        if(x < c) cout << -1 << endl;
+        else cout << x - c + dif << endl;
+    }
+}
+
+signed main()
+{
+
+//    ios::sync_with_stdio(0);
+//    cin.tie(0), cout.tie(0);
+    freopen("in.txt", "r" ,stdin);
+    int t = 1;
+    cin >> t;
+    while(t --) solve();
+    return 0;
+}
